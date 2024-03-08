@@ -23,7 +23,6 @@ vector <vector<pair<path, int>>> Cost::dijkstra(vector<vector<path>>distance_dat
 
     z.push(make_pair(0, make_pair(x , 0)));
 
-
     while (!z.empty()) {
 
         if (visited [make_pair(z.top().second.first.end, z.top().second.first.tp)] == false){

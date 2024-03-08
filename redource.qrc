@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/new/prefix1">
-        <file>files/Matrix.txt</file>
         <file>files/distanceList.txt</file>
     </qresource>
 </RCC>

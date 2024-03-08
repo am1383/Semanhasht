@@ -18,7 +18,6 @@ vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const
 
     z.push(make_pair(0, make_pair(x , 0)));
 
-
     while (!z.empty()) {
 
         if (visited [z.top().second.first.end] == false){
@@ -36,6 +35,7 @@ vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const
                 z.push(make_pair(cost_distance, make_pair(distance_data[z.top().second.first.end][i] , z.top().second.first.tp)));
             }
         }
+        
         z.pop();
     }
     return ans;

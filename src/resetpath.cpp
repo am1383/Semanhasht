@@ -2,7 +2,6 @@
 
 ResetPath::ResetPath() {}
 
-
 void ResetPath::set_edges (QObject* object, QVariant edge_color, QVariant width){
     edge.push_back(object);
     color.push_back(edge_color);

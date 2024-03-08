@@ -9,7 +9,7 @@ class ResetPath
 public:
     ResetPath();
     void set_edges(QObject*, QVariant, QVariant);
-    void reset ();
+    void reset();
 private:
     std::vector <QObject*> edge;
     std::vector <QVariant> color;

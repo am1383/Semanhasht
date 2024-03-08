@@ -4,7 +4,6 @@
 #include <vector>
 #include "distance.hpp"
 
-
 class Cost
 {
 public:

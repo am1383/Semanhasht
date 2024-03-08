@@ -30,7 +30,7 @@ public slots:
 signals:
 
 private:
-    std::vector <std::vector<QObject*>>objects  = std::vector <std::vector<QObject*>>(59);
+    std::vector <std::vector<QObject*>>objects = std::vector <std::vector<QObject*>>(59);
 
     std::unordered_map <std::string, int> stationToIndex;
     std::unordered_map <int, std::string> indexToStation;

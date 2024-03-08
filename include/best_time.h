@@ -11,6 +11,7 @@ public:
     Best_time();
     std::vector <std::vector<std::pair<path, int>>> dijkstra(const std::vector<std::vector<path>>&, const int&, const int&, TTime&);
     int get_time_cost();
+    
 private:
     int bus_time;
     int taxi_time;
