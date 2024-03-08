@@ -7,6 +7,7 @@
 using namespace std;
 
 vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const int &src, const int &des){
+    
     int V = 59;
     vector <path> ans(V);
 
@@ -16,7 +17,7 @@ vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const
 
     path x(src);
 
-    z.push(make_pair(0, make_pair(x , 0)));
+    z.push(make_pair(0, make_pair(x, 0)));
 
     while (!z.empty()) {
 

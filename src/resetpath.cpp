@@ -9,7 +9,7 @@ void ResetPath::set_edges (QObject* object, QVariant edge_color, QVariant width)
 }
 
 void ResetPath::reset (){
-    for (int i=0 ; i<edge.size(); i++){
+    for (int i=0; i<edge.size(); i++){
         edge[i]-> setProperty("color" , color[i]);
         edge[i]-> setProperty("strokeWidth" , strokeWidth[i]);
     }

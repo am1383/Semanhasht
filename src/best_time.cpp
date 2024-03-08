@@ -48,7 +48,7 @@ vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&
                     break;
             }
             int traffic_time = tt.traffic_time(z.top().first);
-            
+
             if (traffic_time==2 && distance_data[z.top().second.first.end][i].tp/10 == 2){
                 cost_time = cost_time * 2;
             }
@@ -71,7 +71,7 @@ vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&
                 }
             }
             cost_time += z.top().first;
-            if (visited [make_pair(distance_data[z.top().second.first.end][i].end, distance_data[z.top().second.first.end][i].tp)] == false ){
+            if (visited [make_pair(distance_data[z.top().second.first.end][i].end, distance_data[z.top().second.first.end][i].tp)] == false){
                 z.push(make_pair(cost_time, make_pair(distance_data[z.top().second.first.end][i] , z.top().second.first.tp)));
             }
         }

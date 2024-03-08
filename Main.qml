@@ -4,8 +4,6 @@ import QtQuick.Controls
 import QtQuick.Controls.Material
 import QtQuick.Layouts
 
-
-
 ApplicationWindow {
     id: root
     width: screen.width
@@ -58,6 +56,7 @@ ApplicationWindow {
             width: parent.width/1.3
             anchors.left: parent.left
             anchors.leftMargin: 60
+
             Label {
                 id: originStationError
                 text: "There is no station with this name !"
@@ -67,6 +66,7 @@ ApplicationWindow {
                 anchors.topMargin: 5
                 anchors.left: parent.left
             }
+
             Rectangle {
                 width: 20
                 height: 20
@@ -119,6 +119,7 @@ ApplicationWindow {
             width: parent.width/1.3
             anchors.left: parent.left
             anchors.leftMargin: 60
+
             Label {
                 id: destinationStationError
                 text: "There is no station with this name !"
@@ -128,6 +129,7 @@ ApplicationWindow {
                 anchors.topMargin: 5
                 anchors.left: parent.left
             }
+
             Image {
                 id: destinationIMG
                 source: "img/destination.png"
@@ -135,11 +137,11 @@ ApplicationWindow {
                 anchors.rightMargin: 7
                 anchors.verticalCenter: parent.verticalCenter
             }
+
             onTextChanged:{
                 c2 = semanhasht.check_station_validation(endTF.text)//console.log ("hi")
             }
         }
-
 
         Rectangle {
             id: endHintText
@@ -148,12 +150,14 @@ ApplicationWindow {
             width: parent.width
             height: 30
             visible: endTF.text === "" ? true : false
+            
             Label {
                 id: et1
                 text: "Type your destination or"
                 anchors.left: parent.left
                 anchors.leftMargin: 40
             }
+
             Label {
                 text: "select it on the map."
                 anchors.left: et1.right
@@ -165,6 +169,7 @@ ApplicationWindow {
                 }
             }
         }
+
         RadioButton {
             id: currently
             anchors.left: endTF.left
@@ -174,6 +179,7 @@ ApplicationWindow {
             checked: true
             text: qsTr("Now")
         }
+
         RadioButton {
             id: anotherTime
             text: qsTr("In another time:")
@@ -181,6 +187,7 @@ ApplicationWindow {
             anchors.left: currently.right
             anchors.leftMargin: 30
         }
+
         TextField {
             id: hourTF
             visible:  anotherTime.checked ? true : false
@@ -199,6 +206,7 @@ ApplicationWindow {
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
+
         TextField {
             id: minutTF
             visible:  anotherTime.checked ? true : false
@@ -216,6 +224,7 @@ ApplicationWindow {
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
+
         Rectangle {
             id: timemas
             visible: false
@@ -236,6 +245,7 @@ ApplicationWindow {
                 anchors.fill: parent
             }
         }
+
         Rectangle {
             id: costmas
             visible: false
@@ -255,6 +265,7 @@ ApplicationWindow {
                 anchors.fill: parent
             }
         }
+
         Rectangle {
             id: distmas
             visible: false
@@ -276,7 +287,6 @@ ApplicationWindow {
         }
     }
 
-
     header: ToolBar{
         //Material.background: Material.Pink//"Black"//Material.BlueGrey
         height: 50
@@ -288,7 +298,6 @@ ApplicationWindow {
         }
 
     }
-
 
     Image {
         id: entrancePic
@@ -331,7 +340,6 @@ ApplicationWindow {
     Component.onCompleted: {
         mainLoad.source = "qrc:/Semanhasht/qml/map.qml"
     }
-
 
     Loader {
         id: mainLoad

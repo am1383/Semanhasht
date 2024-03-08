@@ -10,7 +10,7 @@ struct path {
     int start, end, length, tp;
     path(){}
     path (int s){
-        start=s ; end=s ; length=0; tp=0;
+        start=s; end=s; length=0; tp=0;
     }
     bool operator<(const std::pair<int , path> & other1) const {
         return true;
