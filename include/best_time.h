@@ -21,7 +21,7 @@ private:
     int taxi_dilay = 5;
     int subway_dilay = 8;
 
-    int time_cost=0;
+    int time_cost = 0;
 };
 
 #endif // BEST_TIME_H

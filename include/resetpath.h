@@ -1,5 +1,6 @@
 #ifndef RESETPATH_H
 #define RESETPATH_H
+
 #include <vector>
 #include <QObject>
 #include <QVariant>

@@ -31,7 +31,7 @@ vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const
         for (int i=0 ; i<edg_num; i++) {
             int cost_distance = distance_data[z.top().second.first.end][i].length;
             cost_distance += z.top().first;
-            if (visited [distance_data[z.top().second.first.end][i].end] == false ){
+            if (visited [distance_data[z.top().second.first.end][i].end] == false){
                 z.push(make_pair(cost_distance, make_pair(distance_data[z.top().second.first.end][i] , z.top().second.first.tp)));
             }
         }

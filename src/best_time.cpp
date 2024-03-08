@@ -2,7 +2,7 @@
 #include <vector>
 #include <map>
 #include <queue>
-//#include "ttime.h"
+
 using namespace std;
 
 Best_time::Best_time() {
@@ -12,6 +12,7 @@ Best_time::Best_time() {
 }
 
 vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&distance_data, const int &src, const int &des, TTime &tt){
+
     int V = 59;
     vector <vector<pair<path, int>>> ans(V); 
 
@@ -21,7 +22,7 @@ vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&
 
     path x(src);
 
-    z.push(make_pair(0, make_pair(x , 0)));
+    z.push(make_pair(0, make_pair(x, 0)));
 
     while (!z.empty()) {
 
@@ -33,7 +34,7 @@ vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&
         }
         //the number of edges of the desired vertex
         int edg_num = distance_data[z.top().second.first.end].size();
-        for (int i=0 ; i<edg_num; i++) {
+        for (int i=0; i<edg_num; i++) {
             int cost_time;
             switch (distance_data[z.top().second.first.end][i].tp/10){
                 case 1:
@@ -47,6 +48,7 @@ vector <vector<pair<path, int>>> Best_time::dijkstra(const vector<vector<path>>&
                     break;
             }
             int traffic_time = tt.traffic_time(z.top().first);
+            
             if (traffic_time==2 && distance_data[z.top().second.first.end][i].tp/10 == 2){
                 cost_time = cost_time * 2;
             }

@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 #include <map>
+
 using namespace std;
 
 Cost::Cost() {
@@ -21,7 +22,7 @@ vector <vector<pair<path, int>>> Cost::dijkstra(vector<vector<path>>distance_dat
 
     path x(src);
 
-    z.push(make_pair(0, make_pair(x , 0)));
+    z.push(make_pair(0, make_pair(x, 0)));
 
     while (!z.empty()) {
 
@@ -34,7 +35,7 @@ vector <vector<pair<path, int>>> Cost::dijkstra(vector<vector<path>>distance_dat
         }
         //the number of edges of the desired vertex
         int edg_num = distance_data[z.top().second.first.end].size();
-        for (int i=0 ; i<edg_num; i++) {
+        for (int i=0; i<edg_num; i++) {
             bool inLine = (distance_data[z.top().second.first.end][i].tp != z.top().second.first.tp || z.top().second.first.tp/10 == 2);
             int cost;
             switch (distance_data[z.top().second.first.end][i].tp/10){
@@ -50,7 +51,7 @@ vector <vector<pair<path, int>>> Cost::dijkstra(vector<vector<path>>distance_dat
             }
             cost = cost * inLine + z.top().first;
             if (visited [make_pair(distance_data[z.top().second.first.end][i].end, distance_data[z.top().second.first.end][i].tp)] == false ){
-                z.push(make_pair(cost, make_pair(distance_data[z.top().second.first.end][i] , z.top().second.first.tp)));
+                z.push(make_pair(cost, make_pair(distance_data[z.top().second.first.end][i], z.top().second.first.tp)));
             }
         }
         z.pop();
