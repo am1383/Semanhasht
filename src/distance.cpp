@@ -4,9 +4,7 @@
 #include <map>
 #include <queue>
 
-
 using namespace std;
-
 
 vector <path> Distance::dijkstra(const vector<vector<path>>&distance_data, const int &src, const int &des){
     int V = 59;

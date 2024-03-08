@@ -85,12 +85,9 @@ void Semanhasht::direction (int src, int end, const int &th, const int &tm){
 
 void Semanhasht::show_path (int src, int end, int type){
     
-    int tst = end;
-
     if (type == 1){
         RP.reset();
         path dd = distance_path[end];
-        int antar = 0;
         while (dd.start != src){
             for (int i=0 ; i<objects[dd.start].size(); i++){
                 if (dd.tp/10 == 1){
@@ -175,7 +172,7 @@ void Semanhasht::show_path (int src, int end, int type){
                 }
             }
         }
-        //first edje
+        //first edge
         for (int i=0 ; i<objects[dd.first.start].size(); i++){
             if (dd.first.tp/10 == 1){
                 if(objects[dd.first.start][i]->property("strokeStyle").toInt() == 2 &&
@@ -234,7 +231,7 @@ void Semanhasht::show_path (int src, int end, int type){
                 }
             }
         }
-        //first edje
+        //first edge
         for (int i=0 ; i<objects[dd.first.start].size(); i++){
             if (dd.first.tp/10 == 1){
                 if(objects[dd.first.start][i]->property("strokeStyle").toInt() == 2 &&
