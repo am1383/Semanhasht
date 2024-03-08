@@ -2,8 +2,6 @@
 #include "ctime"
 
 TTime::TTime(const int &h, const int &m) {
-    //set_hour(h, m);
-    //set_min(h, m);
     hour = h;
     minute = m;
 }
@@ -12,24 +10,12 @@ void TTime::set_hour(const int &h, const int &m){
     if (0 < h && h < 25 && 0 < m && m < 60){
         hour = h;
     }
-    // else {
-    //     time_t now = time(0);
-    //     tm *ltm = localtime(&now);
-
-    //     hour = ltm->tm_hour;
-    // }
 } 
 
 void TTime::set_min(const int &h, const int &m){
     if (0 < h && h < 25 && 0 < m && m < 60){
         minute = m;
     }
-    // else {
-    //     time_t now = time(0);
-    //     tm *ltm = localtime(&now);
-
-    //     minute = ltm->tm_min;
-    // }
 } 
 
 int TTime::traffic_time (const int &t){
